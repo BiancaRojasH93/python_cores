@@ -1,7 +1,5 @@
 class tarjetaCredito:
 
-    todas_las_tarjetas= []
-
     def __init__(self, saldo_pagar, limite_credito, intereses):
 
         self.saldo_pagar= saldo_pagar
