@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mis_estilos.css') }}">
+</head>
+<body>
+
+    <table>
+        {%for i in range(filas)%}
+        <tr>
+            {%for j in range(columnas)%}
+            <td class="{% if (i + j) % 3 == 0 %}azul{% elif (i + j) % 3 == 1 %}amarillo{% else %}rosa{% endif %}">
+                {{ tablero[i * columnas + j] }}
+            </td>
+            {%endfor%}
+        </tr>
+        {%endfor%}
+    </table>
+</body>
+</html>
